@@ -54,23 +54,24 @@ Console.WriteLine(result);
 // Task 4. Напишите программу, которая принимает на вход число n и проверяет, 
 //         кратно ли оно одновременно a и b.
 
-bool Even(int num1, int num2, int arg)
+bool Even1(int numA, int numB, int arg)
 {
-    if (num1 % arg == 0 && num2 % arg == 0)
+    if (numA % arg == 0 && numB % arg == 0)
         return true;
     else
         return false;
 }
 
 Console.WriteLine("Input first number, please: ");
-int num1 = Convert.ToInt32(Console.ReadLine());
+int numA = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input second number, please: ");
-int num2 = Convert.ToInt32(Console.ReadLine());
+int numB = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input third number, please: ");
 int arg = Convert.ToInt32(Console.ReadLine());
 
-bool result = Even(num1, num2, arg);
-Console.WriteLine(result);
+bool result1 = Even1(numA, numB, arg);
+Console.WriteLine(result1);
+
 
 
 // Task 5. Напишите программу, которая принимает на вход два числа и проверяет, 
