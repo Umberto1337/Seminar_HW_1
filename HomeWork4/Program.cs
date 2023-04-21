@@ -16,25 +16,25 @@
 // Console.WriteLine("A в степени B равно: " + step);
 
 // // Рещение 1.1
-int Enternum(string message)
-{
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
+// int Enternum(string message)
+// {
+//     Console.Write(message);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
 
-void StepNum(int a, int b)
-{
-    int step = 1;
-    for(int i = 1; i <= b; i++)
-    {
-        step = step * a;
-    }
-    Console.Write(step);
-}
+// void StepNum(int a, int b)
+// {
+//     int step = 1;
+//     for(int i = 1; i <= b; i++)
+//     {
+//         step = step * a;
+//     }
+//     Console.Write(step);
+// }
 
-int numA = Enternum("Введите число A: ");
-int numB = Enternum("Введите число B: ");
-StepNum(numA, numB);
+// int numA = Enternum("Введите число A: ");
+// int numB = Enternum("Введите число B: ");
+// StepNum(numA, numB);
 
 
 // // Task 2. Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
@@ -56,39 +56,39 @@ StepNum(numA, numB);
 // Console.WriteLine("сумма всех цифр в числе равна: " + sum);
 
 // // Решение 1.1
-int Enternum(string message)
-{
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
+// int Enternum(string message)
+// {
+//     Console.Write(message);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
 
-int Numberlen(int a)
-{
-    int index = 0;
-    while(a > 0)
-    {
-        a/=10;
-        index++;
-    }
-    return index;
-}
-
-
-void SumNumber(int n, int len)
-{
-    int sum = 0;
-    for (int i = 1; i <= len; i++)
-    {
-        sum += n % 10;
-        n /= 10;
-    }
-    Console.WriteLine(sum);
-}
+// int Numberlen(int a)
+// {
+//     int index = 0;
+//     while(a > 0)
+//     {
+//         a/=10;
+//         index++;
+//     }
+//     return index;
+// }
 
 
-int unity = Enternum("Введите число: ");
-int len = Numberlen(unity);
-SumNumber(unity, len);
+// void SumNumber(int n, int len)
+// {
+//     int sum = 0;
+//     for (int i = 1; i <= len; i++)
+//     {
+//         sum += n % 10;
+//         n /= 10;
+//     }
+//     Console.WriteLine(sum);
+// }
+
+
+// int unity = Enternum("Введите число: ");
+// int len = Numberlen(unity);
+// SumNumber(unity, len);
 
 
 
@@ -131,35 +131,35 @@ SumNumber(unity, len);
 
 // // ========================================================
 // // 3) Perfect
-int EnterNum(string message)
-{
-    Console.Write(message);
-    return Convert.ToInt32(Console.ReadLine());
-}
+// int EnterNum(string message)
+// {
+//     Console.Write(message);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
 
-int[] CreateArr(int Length)
-{
-    int[] array = new int[Length];
-    for (int i = 0; i < Length; i ++)
-    {
-        array[i] = new Random().Next(Length + 1);
-    }
-    return array;
-}
+// int[] CreateArr(int Length)
+// {
+//     int[] array = new int[Length];
+//     for (int i = 0; i < Length; i ++)
+//     {
+//         array[i] = new Random().Next(Length + 1);
+//     }
+//     return array;
+// }
 
-void ShowArr(int[] array)
-{
-    Console.Write("[");
-    for (int i = 0; i < array.Length - 1; i++)
-    {
-        Console.Write($"{array[i]}, ");
-    }
-    Console.Write($"{array[array.Length - 1]}");
-    Console.WriteLine("]");
-}
+// void ShowArr(int[] array)
+// {
+//     Console.Write("[");
+//     for (int i = 0; i < array.Length - 1; i++)
+//     {
+//         Console.Write($"{array[i]}, ");
+//     }
+//     Console.Write($"{array[array.Length - 1]}");
+//     Console.WriteLine("]");
+// }
 
-int lenght = EnterNum("Длина массива: ");
-int[] array = CreateArr(lenght);
+// int lenght = EnterNum("Длина массива: ");
+// int[] array = CreateArr(lenght);
 
-ShowArr(array);
+// ShowArr(array);
 // // ========================================================
