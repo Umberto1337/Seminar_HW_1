@@ -101,3 +101,82 @@ int column = Convert.ToInt32(Console.ReadLine());
 int[,] myArray = CreateRandom2dArray(rows, columns, minValue, maxValue);
 Show2dArray(myArray);
 FindElementValue(myArray, column - 1, row - 1);
+
+
+// // Task 3. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+// // Например, задан массив:
+// // 1 4 7 2
+// // 5 9 2 3
+// // 8 4 2 4
+// // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+
+
+int[,] CreateRandom2dArray(int rows, int columns, int minValue, int maxValue) 
+{
+    int[,] array = new int[rows, columns];
+
+    for (int i = 0; i < rows; i++) 
+    {
+        for (int j = 0; j < columns; j++) 
+        {
+            array[i, j] = new Random().Next(minValue, maxValue +1);
+        }
+    }
+    return array;
+}
+
+void Show2dArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+            Console.Write(array[i, j] + " ");
+        Console.WriteLine();
+    }
+    Console.WriteLine();
+}
+
+double[] ColumnAverages(int[,] array)
+{
+    int rows = array.GetLength(0);
+    int columns = array.GetLength(1);
+
+    double[] columnSums = new double[columns];
+
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < columns; j++)
+        {
+            columnSums[j] += array[i, j];
+        }
+    }
+
+    for (int i = 0; i < columns; i++)
+    {
+        columnSums[i] = Math.Round(columnSums[i] / rows, 1);
+    }
+
+    return columnSums;
+}
+
+
+Console.Write("Input a quantity of rows: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a quantity of columns: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a minimum possible value: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a maximum possible value: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+
+
+int[,] myArray = CreateRandom2dArray(rows, columns, minValue, maxValue);
+Show2dArray(myArray);
+double[] Calc = ColumnAverages(myArray);
+Console.WriteLine("Среднее арифметическое каждого столбца:");
+for (int i = 0; i < Calc.Length; i++)
+{
+    Console.WriteLine("Столбец " + i + ": " + Calc[i]);
+}
+Console.WriteLine();
