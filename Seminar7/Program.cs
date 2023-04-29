@@ -1,51 +1,14 @@
-﻿int[,] CreateRandom2dArray(int rows, int colums, int minValue, int maxValue)
-{
-    int[,] array = new int[rows, colums];
-
-    for (int i = 0; i < rows; i++)
-        for (int j = 0; j < colums; j++)
-            array[i, j] = new Random().Next(minValue, maxValue + 1);
-
-    return array;
-}
-
-void Show2dArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-            Console.Write(array[i, j] + " ");
-        
-        Console.WriteLine();
-    }
-    Console.WriteLine();
-}
-
-
-Console.Write("Input a quantity of rows: ");
-int rows = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input a quantity of colums: ");
-int colums = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input a quantity of min: ");
-int minValue = Convert.ToInt32(Console.ReadLine());
-Console.Write("Input a quantity of max: ");
-int maxValue = Convert.ToInt32(Console.ReadLine());
-
-int[,] myArray = CreateRandom2dArray(rows, colums, minValue, maxValue);
-Show2dArray(myArray);
-
-
-// Task 1. Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
-// int[,] CreateRandom2dArray(int rows, int columns, int minValue, int maxValue)
+﻿// //Task 1. Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
+// int[,] CreateRandom2dArray(int rows, int colums, int minValue, int maxValue)
 // {
-//     int[,] array = new int[rows, columns];
+//     int[,] array = new int[rows, colums];
 
 //     for (int i = 0; i < rows; i++)
-//         for (int j = 0; j < columns; j++)
+//         for (int j = 0; j < colums; j++)
 //             array[i, j] = new Random().Next(minValue, maxValue + 1);
+
 //     return array;
 // }
-
 
 // void Show2dArray(int[,] array)
 // {
@@ -53,24 +16,23 @@ Show2dArray(myArray);
 //     {
 //         for (int j = 0; j < array.GetLength(1); j++)
 //             Console.Write(array[i, j] + " ");
+        
 //         Console.WriteLine();
 //     }
 //     Console.WriteLine();
 // }
 
-// Console.Write("Input a quantioty of rows: ");
+
+// Console.Write("Input a quantity of rows: ");
 // int rows = Convert.ToInt32(Console.ReadLine());
-
-// Console.Write("Input a quantioty of columns: ");
-// int columns = Convert.ToInt32(Console.ReadLine());
-
-// Console.Write("Input a minimum possible value: ");
+// Console.Write("Input a quantity of colums: ");
+// int colums = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input a quantity of min: ");
 // int minValue = Convert.ToInt32(Console.ReadLine());
-
-// Console.Write("Input a maximum possible value: ");
+// Console.Write("Input a quantity of max: ");
 // int maxValue = Convert.ToInt32(Console.ReadLine());
 
-// int[,] myArray = CreateRandom2dArray(rows, columns, minValue, maxValue);
+// int[,] myArray = CreateRandom2dArray(rows, colums, minValue, maxValue);
 // Show2dArray(myArray);
 
 
@@ -218,4 +180,57 @@ Show2dArray(myArray);
 
 // // Task 3. Задайте двумерный массив. Найдите сумму элементов, 
 // //         находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
+// int[,] CreateRandom2dArray(int rows, int colums, int minValue, int maxValue)
+// {
+//     int[,] array = new int[rows, colums];
 
+//     for (int i = 0; i < rows; i++)
+//         for (int j = 0; j < colums; j++)
+//             array[i, j] = new Random().Next(minValue, maxValue + 1);
+
+//     return array;
+// }
+
+// void Show2dArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//             Console.Write(array[i, j] + " ");
+        
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+
+// int SumDiagonal(int[,] array)
+// {
+//     int rows = array.GetLength(0);
+//     int columns = array.GetLength(1);
+
+//     int sum = 0;
+
+//     // Проходим по элементам на главной диагонали и складываем их
+//     for (int i = 0; i < rows && i < columns; i++)
+//     {
+//         sum += array[i, i];
+//     }
+
+//     return sum;
+// }
+
+
+// Console.Write("Input a quantity of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input a quantity of columns: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input a quantity of min: ");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input a quantity of max: ");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+
+// int[,] myArray = CreateRandom2dArray(rows, columns, minValue, maxValue);
+// Show2dArray(myArray);
+
+// int sum = SumDiagonal(myArray);
+// Console.WriteLine("Сумма элементов на главной диагонали: " + sum);
