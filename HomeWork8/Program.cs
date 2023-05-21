@@ -260,44 +260,6 @@ Show2dArray(resultMatrix);
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
 
-void Show3dArray(Array array)
-{
-    int dimensions = array.Rank;
-    if (dimensions == 2)
-    {
-        int rows = array.GetLength(0);
-        int columns = array.GetLength(1);
-
-        for (int i = 0; i < rows; i++)
-        {
-            for (int j = 0; j < columns; j++)
-                Console.Write(array.GetValue(i, j) + " ");
-
-            Console.WriteLine();
-        }
-        
-    }
-    else if (dimensions == 3)
-    {
-        int rows = array.GetLength(0);
-        int columns = array.GetLength(1);
-        int depth = array.GetLength(2);
-
-        for (int i = 0; i < rows; i++)
-        {
-            for (int j = 0; j < columns; j++)
-            {
-                for (int k = 0; k < depth; k++)
-                    Console.Write(array.GetValue(i, j, k) + " ");
-
-                Console.WriteLine();
-            }
-        }
-    }
-
-    Console.WriteLine();
-}
-
 int[,,] GenerateUniqueTwoDigitArray(int size1, int size2, int size3)
 {
     int[,,] array = new int[size1, size2, size3];
@@ -364,7 +326,6 @@ for (int i = 0; i < rows; i++)
 
 
 int[,,] array = GenerateUniqueTwoDigitArray(2, 2, 2);
-Show3dArray(array);
 Print3dArrayIndex(array);
 
 
